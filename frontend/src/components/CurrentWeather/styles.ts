@@ -17,7 +17,7 @@ export const Container = styled.div`
         margin-right: 2vw;
     }
     > .weatherData{
-        background: lightgray;
+        background: rgb(255, 255, 255, 0.3);
         padding: 20px;
 
         color: white;
