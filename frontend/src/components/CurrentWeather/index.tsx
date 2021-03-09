@@ -15,6 +15,8 @@ export default function CurrentWeather(){
         </div>
       </div>
       <div className='weatherData'>
+
+        <div>
         <div>
           <h2>22º</h2>
           <h3>Max</h3>
@@ -27,18 +29,21 @@ export default function CurrentWeather(){
           <h2>6:00</h2>
           <h3>Sunrise</h3>
         </div>
-        <div>
-          <h2>20º</h2>
-          <h3>Low</h3>
-        </div>
-        <div>
-          <h2>79%</h2>
-          <h3>Rain</h3>
-        </div>
-        <div>
-          <h2>6:40</h2>
-          <h3>Sunset</h3>
-        </div>
+       </div>
+          <div>
+          <div>
+            <h2>20º</h2>
+            <h3>Low</h3>
+          </div>
+          <div>
+            <h2>79%</h2>
+            <h3>Rain</h3>
+          </div>
+          <div>
+            <h2>6:40</h2>
+            <h3>Sunset</h3>
+          </div>
+          </div>
       </div>
     </Container>
   );
