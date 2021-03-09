@@ -9,18 +9,25 @@ export const Container = styled.div`
     margin-top: auto;
     align-items: center;
     justify-content: flex-end;
-    gap: 300px;
     > div {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
+        width: 100%;
     }
-    > .currentWeather .symbol{
-        width: 150px;
-        height: 50%;
-        background-color: gray;
-        margin-right: 2vw;
+    > div:first-child{
+        h1{
+            font-size: 6rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+        p{
+            line-height: 0;
+            font-size: 2rem;
+        }
     }
+
     > .weatherData{
         display: flex;
         flex-direction: column;
@@ -28,15 +35,12 @@ export const Container = styled.div`
         align-items: center;
         background: rgb(255, 255, 255, 0.3);
         /* padding: 20px; */
-        width: 40%;
-        height: 50%;
+        width: 100%;
+        min-height: 50%;
 
 
         color: white;
         border-radius: 10px;
-        
-        
-
         > div {
             width: 100%;
             height: 100%; 
