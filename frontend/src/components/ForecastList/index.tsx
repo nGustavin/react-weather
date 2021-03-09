@@ -3,8 +3,7 @@ import { Container} from './styles';
 
 import { TiWeatherCloudy, TiWeatherNight, TiWeatherPartlySunny, TiWeatherShower, TiWeatherSnow, TiWeatherStormy, TiWeatherSunny } from 'react-icons/ti'
 
-
-const ForecastList: React.FC = () => {
+const ForecastList: React.FC = () => { 
   return (
     <Container>
       <h1>Forecast</h1>
