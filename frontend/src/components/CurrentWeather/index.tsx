@@ -38,7 +38,7 @@ export default function CurrentWeather(){
     <Container>
       <div className="currentWeather">
         <TiWeatherCloudy 
-          size='25vh'
+          size='10rem'
           fill='white'
         />
         <div>
