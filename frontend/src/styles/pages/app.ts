@@ -11,4 +11,5 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     background-image: url(${bg});
     background-size: cover;
+    padding: 20px 130px;
 `

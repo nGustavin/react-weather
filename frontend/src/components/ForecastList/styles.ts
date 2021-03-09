@@ -6,9 +6,9 @@ export const Container = styled.div`
     align-items: flex-start;
 
     > h1{
+        margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        margin-left: 130px;
         color: white;
     }
     
@@ -19,7 +19,7 @@ export const Container = styled.div`
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: 1fr;
         gap: 25px;
-        padding: 15px 130px;
+        /* padding: 15px 130px; */
         justify-content: center;
         align-items: center;
 
