@@ -17,7 +17,7 @@ const ForecastList: React.FC = () => {
 
           <TiWeatherCloudy
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>41º</h2>
@@ -30,7 +30,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherNight
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>16º</h2>
@@ -43,7 +43,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherPartlySunny
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>21º</h2>
@@ -56,7 +56,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherShower
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>27º</h2>
@@ -69,7 +69,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherSnow
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>34º</h2>
@@ -82,7 +82,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherStormy
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>24º</h2>
@@ -95,7 +95,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherSunny
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>14º</h2>
@@ -108,7 +108,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherShower
             size={30}
-            fill="white"
+            fill="#FFF"
           />
 
           <h2>44º</h2>
@@ -121,7 +121,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherShower
             size={30}
-            fill="white"
+            fill="#FFF"
           />
           <h2>12º</h2>
         </div>
@@ -133,7 +133,7 @@ const ForecastList: React.FC = () => {
           </div>
           <TiWeatherShower
             size={30}
-            fill="white"
+            fill="#FFF"
           />
           <h2>74º</h2>
         </div>

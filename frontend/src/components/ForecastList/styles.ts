@@ -8,7 +8,8 @@ export const Container = styled.div`
     > h1{
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        margin-left: 30px;
+        margin-left: 130px;
+        color: white;
     }
     
     > .grid-container {
@@ -17,18 +18,21 @@ export const Container = styled.div`
         height: 190px;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: 1fr;
-        gap: 15px;
-        padding: 15px 30px;
+        gap: 25px;
+        padding: 15px 130px;
+        justify-content: center;
+        align-items: center;
 
         >div {
-            background-color: rgba(255, 255, 255, 0.6);
-            width: 85%;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 100%;
             height: 100%;
             border-radius: 6px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            padding: 6px 0px;
 
 
             > div{
@@ -36,14 +40,16 @@ export const Container = styled.div`
                 >h3{
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 300;
-                    font-size: 20px;
+                    font-size: 19px;
+                    color: #FFF;
                 }
             }
 
             > h2 {
                 font-family: 'Montserrat', sans-serif;
-                font-weight: 400;
-                font-size: 26px;
+                font-weight: 600;
+                font-size: 24px;
+                color: #FFF;
             }
         }
     }
