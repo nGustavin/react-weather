@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bg from './../../assets/images/cool-forest.jpg'
+import bg from './../../assets/images/forest.png'
 
 export const Wrapper = styled.div`
     width: 100vw;
@@ -10,5 +10,5 @@ export const Wrapper = styled.div`
     align-items: space-between;
     justify-content: space-between;
     background-image: url(${bg});
-    background-size: contain;
+    background-size: cover;
 `
