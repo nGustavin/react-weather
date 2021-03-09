@@ -5,10 +5,7 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
-    margin: 10px 0;
-    margin-top: auto;
     align-items: center;
-    justify-content: flex-end;
     > div {
         display: flex;
         align-items: center;
@@ -49,7 +46,7 @@ export const Container = styled.div`
             justify-content: space-around;
 
            >div{
-               
+               padding: 2rem;
                 >h2{
                     font-size: 1.5em;
                     text-align: center;
@@ -58,7 +55,7 @@ export const Container = styled.div`
                 }
 
                 >h3{
-                    font-size: 1.5em;
+                    font-size: 1.25em;
                     text-align: center;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 500;
