@@ -2,13 +2,16 @@ import React from 'react';
 
 import { Container } from './styles';
 
+import { TiWeatherCloudy } from 'react-icons/ti'
+
 export default function CurrentWeather(){
   return (
     <Container>
       <div className="currentWeather">
-        <div className="symbol">
-          Mockup Symbol
-        </div>
+        <TiWeatherCloudy 
+          size='25vh'
+          fill='white'
+        />
         <div>
           <h1>21º</h1>
           <p>Broken Clouds</p>
