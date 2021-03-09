@@ -23,6 +23,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
 
+
         >div {
             background-color: rgba(255, 255, 255, 0.3);
             width: 100%;
@@ -33,7 +34,6 @@ export const Container = styled.div`
             align-items: center;
             justify-content: space-between;
             padding: 6px 0px;
-
 
             > div{
                 text-align: center;
