@@ -1,19 +1,16 @@
 import React from 'react';
 import CurrentWeather from './components/CurrentWeather';
-import ForecastList from './components/forecastlist';
+import ForecastList from './components/ForecastList';
 import GlobalStyle from './styles/globaStyles';
-
-
+import { Wrapper } from './styles/pages/app';
 
 function App() {
   return (
-    <>
+    <Wrapper>
       <GlobalStyle/>
-      <div className="wrap">
-          <CurrentWeather />
-          <ForecastList/>
-      </div>
-    </>
+      <CurrentWeather />
+      <ForecastList/>
+    </Wrapper>
   )
 }
 

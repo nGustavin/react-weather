@@ -8,15 +8,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: Roboto, sans-serif;
     }
     body{
-        /*  
         width: 100vw;
-        height: 100vh; 
-        */
-    }
-    .wrap{
-        width: 100%;
-        max-width: 992px;
-        margin: 0 auto;
+        height: 100vh;
     }
 `
 
