@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
+import bg from './../assets/images/mountain.jpg'
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -7,13 +8,12 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: Roboto, sans-serif;
     }
-    html{
-        width: 100vw;
-        height: 100vh;
-    }
     body{
         width: 100%;
         height: 100%;
+        background-image: url(${bg});
+        background-position-y: 20%;
+        background-size: cover;
     }
 `
 

@@ -26,6 +26,7 @@ export const Container = styled.div`
         }
         p{
             width: 15rem;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
         }
     }
@@ -36,6 +37,8 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         background: rgb(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
         /* padding: 20px; */
         width: 100%;
         min-height: 50%;
@@ -51,7 +54,7 @@ export const Container = styled.div`
             justify-content: space-around;
 
            >div{
-               padding: 2rem;
+               padding: 1.5rem;
                 >h2{
                     font-size: 1.5em;
                     text-align: center;

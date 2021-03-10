@@ -17,6 +17,10 @@ interface WeatherInfo{
   current: {
     temp_c: 'number';
     wind_kph: 'number',
+    condition: {
+      icon: 'string',
+      text: 'string'
+    }
   }
   forecast: {
     forecastday:[
@@ -25,10 +29,7 @@ interface WeatherInfo{
           maxtemp_c: 'number';
           mintemp_c: 'number';
           daily_chance_of_rain: 'number';
-          condition: {
-            icon: 'string',
-            text: 'string'
-          }
+          
         }
         astro: {
           sunrise: 'string';
@@ -54,12 +55,12 @@ export default function CurrentWeather(){
     <Container>
       <div className="currentWeather">
         <img 
-          src={'https:' + weather?.forecast.forecastday[0].day.condition.icon} 
+          src={'https:' + weather?.current.condition.icon}
           alt="WeatherIcon"
         />
         <div>
           <h1>{weather?.current.temp_c} º</h1>
-          <p>{weather?.forecast.forecastday[0].day.condition.text}</p>
+          <p>{weather?.current.condition.text}</p>
         </div>
       </div>
       <div className='weatherData'>

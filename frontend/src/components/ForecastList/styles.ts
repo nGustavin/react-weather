@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,6 +27,8 @@ export const Container = styled.div`
 
         >div {
             background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
             width: 100%;
             height: 100%;
             border-radius: 6px;
