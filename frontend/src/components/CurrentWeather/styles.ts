@@ -6,6 +6,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     align-items: center;
+    margin-bottom: auto;
     > div {
         display: flex;
         align-items: center;
@@ -14,14 +15,18 @@ export const Container = styled.div`
         width: 100%;
     }
     > div:first-child{
+        img{
+            width: 15vw;
+        }
         h1{
             font-size: 6rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
+            line-height: 5.5rem;
         }
         p{
-            line-height: 0;
-            font-size: 2rem;
+            width: 15rem;
+            font-size: 1.5rem;
         }
     }
 

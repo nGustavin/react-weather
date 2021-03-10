@@ -15,19 +15,35 @@ interface WeatherInfo{
     region: "string",
   },
   current: {
-    condition: {
-      icon: 'string',
-      text: 'string'
-    }
+    temp_c: 'number';
+    wind_kph: 'number',
+  }
+  forecast: {
+    forecastday:[
+      index: {
+        day: {
+          maxtemp_c: 'number';
+          mintemp_c: 'number';
+          daily_chance_of_rain: 'number';
+          condition: {
+            icon: 'string',
+            text: 'string'
+          }
+        }
+        astro: {
+          sunrise: 'string';
+          sunset: 'string';
+        }
+      },
+    ]
   }
 }
 
 export default function CurrentWeather(){
-
   const [ weather, setWeather ] = useState<WeatherInfo>()
 
   useEffect(() => {
-    api.get('https://api.weatherapi.com/v1/current.json?key=dc546a4fbf4d45508cf212117210403&q=Curitiba&aqi=no').then(response => {
+    api.get('https://api.weatherapi.com/v1/forecast.json?key=dc546a4fbf4d45508cf212117210403&q=Curitiba&aqi=no').then(response => {
       setWeather(response.data)
     })
   }, [])
@@ -37,42 +53,42 @@ export default function CurrentWeather(){
   return (
     <Container>
       <div className="currentWeather">
-        <TiWeatherCloudy 
-          size='10rem'
-          fill='white'
+        <img 
+          src={'https:' + weather?.forecast.forecastday[0].day.condition.icon} 
+          alt="WeatherIcon"
         />
         <div>
-          <h1>{weather?.location.name}</h1>
-          <p>Broken Clouds</p>
+          <h1>{weather?.current.temp_c} º</h1>
+          <p>{weather?.forecast.forecastday[0].day.condition.text}</p>
         </div>
       </div>
       <div className='weatherData'>
 
         <div>
         <div>
-          <h2>22º</h2>
+          <h2>{weather?.forecast.forecastday[0].day.maxtemp_c}º</h2>
           <h3>Max</h3>
         </div>
         <div>
-          <h2>6.69Km/h</h2>
+          <h2>{weather?.current.wind_kph} Km/h</h2>
           <h3>Wind</h3>
         </div>
         <div>
-          <h2>6:00</h2>
+          <h2>{weather?.forecast.forecastday[0].astro.sunrise}</h2>
           <h3>Sunrise</h3>
         </div>
        </div>
           <div>
           <div>
-            <h2>20º</h2>
-            <h3>Low</h3>
+            <h2>{weather?.forecast.forecastday[0].day.mintemp_c}º</h2>
+            <h3>Min</h3>
           </div>
           <div>
-            <h2>79%</h2>
+            <h2>{weather?.forecast.forecastday[0].day.daily_chance_of_rain} %</h2>
             <h3>Rain</h3>
           </div>
           <div>
-            <h2>6:40</h2>
+            <h2>{weather?.forecast.forecastday[0].astro.sunset}</h2>
             <h3>Sunset</h3>
           </div>
           </div>

@@ -34,7 +34,23 @@ function Location() {
   weekday[5] = "Friday";
   weekday[6] = "Saturday";
 
+
+  var months = new Array(12);
+  months[0] = "January";
+  months[1] = "February";
+  months[2] = "March";
+  months[3] = "April";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+
   var n = weekday[d.getDay()];
+  var m = months[d.getMonth()]
 
   useEffect(() => {
     api.get('https://api.weatherapi.com/v1/current.json?key=dc546a4fbf4d45508cf212117210403&q=Curitiba&aqi=no').then(response => {
@@ -45,7 +61,7 @@ function Location() {
   return (
     <Container>
       <h1>{weather?.location.name}, {weather?.location.country}</h1>
-      <p>{n}, {weather?.location.localtime}</p>
+      <p>{n}, {d.getDate()} {m}</p>
     </Container>
   );
 };

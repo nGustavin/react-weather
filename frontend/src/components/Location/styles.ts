@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     margin-bottom: 1rem; 
-    margin-top: 10vh;
+    margin-top: auto;
     color: white;
     width: 100%;
     height: auto;
@@ -16,5 +16,6 @@ export const Container = styled.div`
     p{
         font-family: 'Montserrat', sans-serif;
         font-size: 1.25rem;
+        font-weight: 600;
     }
 `;
