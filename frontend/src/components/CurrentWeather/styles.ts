@@ -32,10 +32,6 @@ export const Container = styled.div`
     }
 
     > .weatherData{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background: linear-gradient(
             to right bottom,
             rgba(255, 255, 255, 0.5),
@@ -44,37 +40,34 @@ export const Container = styled.div`
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
-        /* padding: 20px; */
         width: 100%;
-        min-height: 50%;
-
-
         color: white;
         border-radius: 10px;
-        > div {
-            width: 100%;
-            height: 100%; 
+
+        display: flex;
+        flex-wrap: wrap;
+
+        div{
+            width: 33%;
             display: flex;
-            align-items: center;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            h2{
+                font-size: 1.5em;
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+            }
 
-           >div{
-               padding: 1.5rem;
-                >h2{
-                    font-size: 1.5em;
-                    text-align: center;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 600;
-                }
-
-                >h3{
-                    font-size: 1.25em;
-                    text-align: center;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 500;
-                }
-           }
+            h3{
+                font-size: 1.25em;
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+            }
         }
+
     }
 
     

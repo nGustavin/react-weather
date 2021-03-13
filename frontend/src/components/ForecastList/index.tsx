@@ -1,164 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container} from './styles';
 
 import { TiWeatherCloudy, TiWeatherNight, TiWeatherPartlySunny, TiWeatherShower, TiWeatherSnow, TiWeatherStormy, TiWeatherSunny } from 'react-icons/ti'
+import axios from 'axios';
+
+interface WeatherInfo{
+  forecast: {
+    forecastday:[
+      index: {
+        hour: [
+          index: {
+            temp_c: 'number',
+            condition: {
+              text: 'string',
+              icon: 'string'
+            }
+          }
+        ]
+      },
+    ]
+  }
+}
 
 const ForecastList: React.FC = () => { 
+  const [isLoading, setIsLoading] = useState(true)
+  const [weather, setWeather] = useState<WeatherInfo>()
+
+  useEffect(() => {
+    axios.get('https://api.weatherapi.com/v1/forecast.json?key=dc546a4fbf4d45508cf212117210403&q=Curitiba&aqi=no').then(response => {
+      setWeather(response.data)
+      setIsLoading(false)
+    })
+  }, [])
+
   return (
     <Container>
       <h1>Forecast</h1>
+      {isLoading ? <div className="loader"></div> : 
       <div className="grid-container">
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
 
-          <TiWeatherCloudy
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>41º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherNight
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>16º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherPartlySunny
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>21º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>27º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherSnow
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>34º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherStormy
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>24º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherSunny
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>14º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-
-          <h2>44º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-          <h2>12º</h2>
-        </div>
-
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-          <h2>74º</h2>
-        </div>
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-          <h2>74º</h2>
-        </div>
-        <div>
-          <div>
-            <h3>04.01</h3>
-            <h3>6:00</h3>
-          </div>
-          <TiWeatherShower
-            size={30}
-            fill="#FFF"
-          />
-          <h2>74º</h2>
-        </div>
+        {
+          weather?.forecast.forecastday[0].hour.map((hour, index) => {
+            return(
+              <div>
+                <div>
+                  <h3>04.01</h3>
+                  <h3>{index}:00</h3>
+                </div>
+                <img src={hour.condition.icon} alt={hour.condition.text}/>
+                <h2>{hour.temp_c}º</h2>
+              </div>
+            )
+          })
+        }
       </div>
+      }
     </Container>
   );
 };

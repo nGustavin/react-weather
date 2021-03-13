@@ -64,22 +64,18 @@ export default function CurrentWeather(){
         </div>
       </div>
       <div className='weatherData'>
-
-        <div>
-        <div>
-          <h2>{weather?.forecast.forecastday[0].day.maxtemp_c}º</h2>
-          <h3>Max</h3>
-        </div>
-        <div>
-          <h2>{weather?.current.wind_kph} Km/h</h2>
-          <h3>Wind</h3>
-        </div>
-        <div>
-          <h2>{weather?.forecast.forecastday[0].astro.sunrise}</h2>
-          <h3>Sunrise</h3>
-        </div>
-       </div>
           <div>
+            <h2>{weather?.forecast.forecastday[0].day.maxtemp_c}º</h2>
+            <h3>Max</h3>
+          </div>
+          <div>
+            <h2>{weather?.current.wind_kph} Km/h</h2>
+            <h3>Wind</h3>
+          </div>
+          <div>
+            <h2>{weather?.forecast.forecastday[0].astro.sunrise}</h2>
+            <h3>Sunrise</h3>
+          </div>
           <div>
             <h2>{weather?.forecast.forecastday[0].day.mintemp_c}º</h2>
             <h3>Min</h3>
@@ -91,7 +87,6 @@ export default function CurrentWeather(){
           <div>
             <h2>{weather?.forecast.forecastday[0].astro.sunset}</h2>
             <h3>Sunset</h3>
-          </div>
           </div>
       </div>
     </Container>

@@ -15,13 +15,11 @@ export const Container = styled.div`
         display: grid;
         width: 100%;
         overflow: auto;
-        grid-template-columns: repeat(12, 1fr);
+        overflow-y: hidden;
+        grid-template-columns: repeat(24, 1fr);
         grid-template-rows: 1fr;
         gap: 15px;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 10px;
-
 
         >div {
             background: linear-gradient(
@@ -39,7 +37,7 @@ export const Container = styled.div`
             align-items: center;
             justify-content: space-between;
             padding: 0.5em 1em;
-
+            position: relative;
             > div{
                 text-align: center;
                 >h3{
@@ -60,5 +58,17 @@ export const Container = styled.div`
     }
     scrollbar-color: white rgba(255, 255, 255, 0.2);
     scrollbar-width: thin;
-    
+    .loader{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top: 10px solid white;
+        border-bottom: 10px solid white;
+        animation: loading 1s linear infinite;
+    }
+    @keyframes loading {
+    from { transform: rotate(0deg) }
+    to   { transform: rotate(360deg) }
+}
 `;

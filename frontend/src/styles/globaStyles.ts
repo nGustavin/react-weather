@@ -16,10 +16,11 @@ const GlobalStyle = createGlobalStyle`
         background-size: cover;
     }
     ::-webkit-scrollbar{
-        height: 5px;
+        height: 10px;
     }
     ::-webkit-scrollbar-track{
         background: rgba(255,255,255, 0.2);
+        border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb{
         background: white;
