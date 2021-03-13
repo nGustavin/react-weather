@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const Wrapper = styled.div`
-    width: 1200px;
+    width: 80vw;
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;

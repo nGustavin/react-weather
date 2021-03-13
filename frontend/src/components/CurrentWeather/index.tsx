@@ -59,13 +59,13 @@ export default function CurrentWeather(){
           alt="WeatherIcon"
         />
         <div>
-          <h1>{weather?.current.temp_c} º</h1>
+          <h1>{weather?.current.temp_c}ºC</h1>
           <p>{weather?.current.condition.text}</p>
         </div>
       </div>
       <div className='weatherData'>
           <div>
-            <h2>{weather?.forecast.forecastday[0].day.maxtemp_c}º</h2>
+            <h2>{weather?.forecast.forecastday[0].day.maxtemp_c}ºC</h2>
             <h3>Max</h3>
           </div>
           <div>
@@ -77,7 +77,7 @@ export default function CurrentWeather(){
             <h3>Sunrise</h3>
           </div>
           <div>
-            <h2>{weather?.forecast.forecastday[0].day.mintemp_c}º</h2>
+            <h2>{weather?.forecast.forecastday[0].day.mintemp_c}ºC</h2>
             <h3>Min</h3>
           </div>
           <div>

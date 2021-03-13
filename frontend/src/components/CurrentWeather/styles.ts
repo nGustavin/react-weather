@@ -5,14 +5,12 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     align-items: center;
-    margin: auto 0;
     > div {
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         width: 100%;
-        height: 40vh;
     }
     > div:first-child{
         img{
@@ -53,6 +51,7 @@ export const Container = styled.div`
             flex-direction: column;
             align-items:center;
             justify-content: center;
+            margin: 2em 0;
             h2{
                 font-size: 1.5em;
                 text-align: center;
