@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
-import bg from './../assets/images/mountain.jpg'
+import bg from './../assets/images/forest.png'
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -12,8 +12,18 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         background-image: url(${bg});
-        background-position-y: 20%;
+        background-position-y: 60%;
         background-size: cover;
+    }
+    ::-webkit-scrollbar{
+        height: 5px;
+    }
+    ::-webkit-scrollbar-track{
+        background: rgba(255,255,255, 0.2);
+    }
+    ::-webkit-scrollbar-thumb{
+        background: white;
+        border-radius: 10px;
     }
 `
 

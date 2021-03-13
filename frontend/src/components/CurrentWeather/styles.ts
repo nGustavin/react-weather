@@ -4,15 +4,15 @@ export const Container = styled.div`
     /* padding: 40px 130px; */
     display: flex;
     width: 100%;
-    height: 100%;
     align-items: center;
-    margin-bottom: auto;
+    margin: auto 0;
     > div {
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         width: 100%;
+        height: 40vh;
     }
     > div:first-child{
         img{
@@ -36,7 +36,12 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgb(255, 255, 255, 0.3);
+        background: linear-gradient(
+            to right bottom,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.2)
+        );
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
         /* padding: 20px; */
@@ -59,7 +64,7 @@ export const Container = styled.div`
                     font-size: 1.5em;
                     text-align: center;
                     font-family: 'Montserrat', sans-serif;
-                    font-weight: 500;
+                    font-weight: 600;
                 }
 
                 >h3{

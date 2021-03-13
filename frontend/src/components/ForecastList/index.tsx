@@ -136,6 +136,28 @@ const ForecastList: React.FC = () => {
           />
           <h2>74º</h2>
         </div>
+        <div>
+          <div>
+            <h3>04.01</h3>
+            <h3>6:00</h3>
+          </div>
+          <TiWeatherShower
+            size={30}
+            fill="#FFF"
+          />
+          <h2>74º</h2>
+        </div>
+        <div>
+          <div>
+            <h3>04.01</h3>
+            <h3>6:00</h3>
+          </div>
+          <TiWeatherShower
+            size={30}
+            fill="#FFF"
+          />
+          <h2>74º</h2>
+        </div>
       </div>
     </Container>
   );
